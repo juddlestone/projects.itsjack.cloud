@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Enter Your Desired Certification and Interests</h2>
+    <form action="/submit" method="post">
+        <div class="mb-3">
+            <label for="certification" class="form-label">🏆 Azure Certification:</label>
+            <select class="form-select" id="certification" name="certification" required>
+                <option value="" disabled selected>Select a Certification</option>
+                <option value="AI-102">AI-102</option>
+                <option value="AI-900">AI-900</option>
+                <option value="AZ-104">AZ-104</option>
+                <option value="AZ-204">AZ-204</option>
+                <option value="AZ-220">AZ-220</option>
+                <option value="AZ-305">AZ-305</option>
+                <option value="AZ-400">AZ-400</option>
+                <option value="AZ-500">AZ-500</option>
+                <option value="AZ-600">AZ-600</option>
+                <option value="AZ-900">AZ-900</option>
+                <option value="DP-203">DP-203</option>
+                <option value="DP-300">DP-300</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="interest1" class="form-label"> ✏️ Interest 1:</label>
+            <input type="text" class="form-control" id="interest1" name="interest1" required>
+        </div>
+        <div class="mb-3">
+            <label for="interest2" class="form-label"> ✏️ Interest 2:</label>
+            <input type="text" class="form-control" id="interest2" name="interest2" required>
+        </div>
+        <div class="mb-3">
+            <label for="interest3" class="form-label"> ✏️ Interest 3:</label>
+            <input type="text" class="form-control" id="interest3" name="interest3" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}
